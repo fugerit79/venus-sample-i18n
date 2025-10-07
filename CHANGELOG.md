@@ -7,8 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [1.0.0] - 2025-10-05
+## [1.0.0] - 2025-10-07
 
 ### Added
 
-- PDF/UA-1 accessibility POC for [Venus Fugerit Doc](https://github.com/fugerit-org/fj-doc)
+- i18n sample for [Venus Fugerit Doc](https://github.com/fugerit-org/fj-doc)
