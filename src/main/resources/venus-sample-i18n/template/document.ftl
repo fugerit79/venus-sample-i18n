@@ -16,16 +16,14 @@
         https://venusdocs.fugerit.org/guide/#doc-format-entry-point
     -->
 
-    <#assign defaultTitle="My sample title XML">
-
     <metadata>
         <!-- Margin for document : left;right;top;bottom -->
         <info name="margins">10;10;10;30</info>
         <!-- documenta meta information -->
-        <info name="doc-title">${docTitle!defaultTitle}</info>
+        <info name="doc-title">${labels['document.title']}</info>
         <info name="doc-subject">fj doc venus sample source FreeMarker Template XML - ftlx</info>
         <info name="doc-author">fugerit79</info>
-        <info name="doc-language">en</info>
+        <info name="doc-language">${labels['document.language.code']}</info>
         <!-- property specific for xls/xlsx -->
         <info name="excel-table-id">data-table=print</info>
         <!-- property specific for csv -->
@@ -35,12 +33,13 @@
         </footer-ext>
     </metadata>
     <body>
-    <para>${docTitle!defaultTitle}</para>
+    <h head-level="1">${labels['document.title']}</h>
+    <para>${messageFormat(labels['document.generation.info'], osName, javaVersion)}</para>
     <table columns="3" colwidths="30;30;40"  width="100" id="data-table" padding="2">
         <row header="true">
-            <cell align="center"><para>Name</para></cell>
-            <cell align="center"><para>Surname</para></cell>
-            <cell align="center"><para>Title</para></cell>
+            <cell align="center"><para>${labels['table.people.header.name']}</para></cell>
+            <cell align="center"><para>${labels['table.people.header.surname']}</para></cell>
+            <cell align="center"><para>${labels['table.people.header.title']}</para></cell>
         </row>
         <#if listPeople??>
             <#list listPeople as current>
